@@ -12,7 +12,10 @@ public class Program {
         int c = sc.nextInt();
 
         int higher = max(a, b, c);
+        int lower =  min(a, b, c);
+        showResult(lower);
         showResult(higher);
+
 
         sc.close();
 
@@ -20,19 +23,37 @@ public class Program {
 
     public static int max(int x, int y, int z) {
 
-        int aux;
-        if (x > y && x > z) {
-            aux = x;
-        } else
-            aux = Math.max(y, z);
-        return aux;
+         int aux;
+         if (x > y && x > z) {
+             aux = x;
+         } else
+             aux = Math.max(y, z);
+         return aux;
+         }
+
+    public static int min(int x, int y, int z) {
+
+         int aux;
+         if (x < y && x < z) {
+             aux = x;
+         } else
+             aux = Math.min(y, z);
+         return aux;
     }
 
 
-        public static void showResult ( int value){
+    public static void showResult ( int value){
 
-            System.out.println("Higher = " + value);
+         System.out.println("Higher = " + value);
 
-        }
     }
+
+    public static void showResultCompleto ( int value){
+
+         System.out.println("Lower = " + value);
+
+    }
+
+
+}
 
